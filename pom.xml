@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.xy.ups</groupId>
+  <artifactId>ups</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>blog-facade</module>
+    <module>ups-utils</module>
+  </modules>
+
+  <name>ups</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>4.12</junit.version>
+    <jersey.version>2.23</jersey.version>
+    <spring.version>4.3.2.RELEASE</spring.version>
+    <druid.version>1.0.23</druid.version>
+    <servlet.version>3.0.1</servlet.version>
+    <mybatis.version>3.4.1</mybatis.version>
+    <mybatis-spring.version>1.3.0</mybatis-spring.version>
+    <mysql-connector.version>5.1.38</mysql-connector.version>
+    <logback.version>1.1.5</logback.version>
+    <slf4j.version>1.7.7</slf4j.version>
+    <google-guava.version>19.0</google-guava.version>
+    <common-logging.version>1.2</common-logging.version>
+    <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+    <maven-jetty-plugin.version>9.3.11.v20160721</maven-jetty-plugin.version>
+    <jdk.version>1.8</jdk.version>
+    <lock-redis.version>1.0.3-SNAPSHOT</lock-redis.version>
+    <cache-client.version>1.1.1-release</cache-client.version>
+    <foresight-metric.version>1.1.0-release</foresight-metric.version>
+    <dom4j.version>1.6.1</dom4j.version>
+    <!-- 配置mybatis.properties的绝对路径，必须添加”file:///“前缀 -->
+    <mybaits.generator.properties.url>
+      file:///
+    </mybaits.generator.properties.url>
+    <mybatis-typehandler-133.version>1.0.1</mybatis-typehandler-133.version>
+    <jersey-test-framework-provider-grizzly2.version>2.24</jersey-test-framework-provider-grizzly2.version>
+    <jersey-test-framework-core.version>2.24</jersey-test-framework-core.version>
+  </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.2</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.7.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.20.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
